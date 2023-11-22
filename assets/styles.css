@@ -1,0 +1,190 @@
+:root {
+    --gray-900: #000000;
+    --gray-800: #2A2A2A;
+    --gray-700: #5B5B5B;
+    --gray-600: #8B8B8B;
+    --gray-500: #B5B5B5;
+    --gray-400: #D6D6D6;
+    --gray-300: #EDEDED;
+    --gray-200: #FBFBFB;
+    --gray-100: #FFFFFF;
+
+    --primary-900: #091C15;
+    --primary-700: #174C37;
+    --primary-500: #298460;
+    --primary-400: #3ABC88;
+    --primary-300: #7ED7B4;
+    --primary-100: #EDF9F4;
+
+    --background: var(--gray-100);
+    --text: var(--gray-900);    
+
+    --link: #3C48CD;
+    --visited: #911BB1;
+    --focus: #D16F19;
+
+    accent-color: var(--primary-500);
+}
+
+@font-face {
+    font-family: "Cooper Hewitt";
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    src: local('Cooper Hewitt'),
+        url('fonts/CooperHewitt-Medium.woff2') format('woff2'),
+        url('fonts/CooperHewitt-Medium.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cooper Hewitt";
+    font-style: italic;
+    font-weight: normal;
+    font-stretch: normal;
+    src: local('Cooper Hewitt Italic'),
+        url('fonts/CooperHewitt-MediumItalic.woff2') format('woff2'),
+        url('fonts/CooperHewitt-MediumItalic.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cooper Hewitt";
+    font-style: normal;
+    font-weight: bold;
+    font-stretch: normal;
+    src: local('Cooper Hewitt Bold'),
+        url('fonts/CooperHewitt-Bold.woff2') format('woff2'),
+        url('fonts/CooperHewitt-Bold.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cooper Hewitt";
+    font-style: italic;
+    font-weight: bold;
+    font-stretch: normal;
+    src: local('Cooper Hewitt Bold Italic'),
+        url('fonts/CooperHewitt-BoldItalic.woff2') format('woff2'),
+        url('fonts/CooperHewitt-BoldItalic.woff') format('woff');
+    font-display: swap;
+}
+
+html, body {
+    min-height: 100vh;
+    max-width: 100%;
+    /* overflow-x: auto; */
+    color: var(--text);
+    background-color: var(--background);
+    font-family: "Cooper Hewitt", "Gill Sans", "Gill Sans MT", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Helvetica, Arial, sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+main {
+    display: block;
+    position: relative;
+    padding: 1rem;
+    max-width: fit-content;
+}
+
+section {
+    padding: 1em 0;
+}
+
+header {
+    padding: 1rem 0;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.0rem;
+    line-height: 1.2em;
+    margin: 0;
+}
+
+h2 {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.75rem;
+    line-height: 1.2em;
+    margin: 0;
+}
+
+h3 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 1.4em;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 1em;
+}
+
+li, p, pre {
+    line-height: 1.6em;
+    font-size: 1.0rem;
+    margin: 0;
+}
+
+p, pre {
+    padding-left: 1em;
+}
+
+pre {
+    white-space: normal;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    outline: none;
+    text-decoration: underline;
+    color: var(--link);
+    padding: 2px 1px 0;
+}
+
+a:visited {
+    color: var(--visited);
+}
+
+a:focus, a:hover {
+    color: var(--primary-500);
+    text-decoration: underline var(--primary-500) solid 3px;
+}
+
+a:focus:not(:focus-visible) {
+    color: unset;
+    text-decoration: unset;
+}
+
+a:focus-visible {
+    color: var(--text);
+    outline: var(--focus) solid 4px;
+    text-decoration: none;
+}
+
+a[href*="http"]::after {
+    content: url(assets/external-link.svg);
+    display: inline-block;
+    margin-left: 0.2em;
+    width: 1em;
+    height: 1em;
+}
+
+.homepage-horizontal-line {
+    background-color: var(--primary-500);
+    width: 100%;
+    height: 24px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}

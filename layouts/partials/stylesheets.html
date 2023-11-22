@@ -1,0 +1,4 @@
+{{ $normalize := resources.Get "normalize.css" }}
+{{ $styles := resources.Get "styles.css" }}
+{{ $cssBundle := resources.Concat "css/bundle.css" (slice $normalize $styles) | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $cssBundle.RelPermalink }}" integrity="{{ $cssBundle.Data.Integrity }}">
